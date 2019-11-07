@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>FontJSON = { User: "9856", DomainID: "freeUQYGDASDZTNAI", Font: ["DFXingShuStd-W5"] }</script>
+    <script src='https://dfo.dynacw.com.tw/DynaJSFont/DynaFont.js'></script>
+    <script src="https://kit.fontawesome.com/847b731f5e.js" crossorigin="anonymous"></script>
+
+    <style>
+        html,
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: PMingLiU;
+        }
+
+        .row {
+            margin-right: 0;
+            margin-left: 0;
+        }
+
+        .carousel-inner img {
+            padding-right: 200px;
+            padding-left: 200px;
+            width: 100%;
+            height: 70%;
+        }
+
+        .carousel-indicators li {
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            background-color: rgb(207, 203, 198);
+        }
+
+        .carousel-indicators .active {
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            background-color: rgb(144, 143, 141);
+        }
+
+        .button-item {
+            margin-right: 1rem;
+            padding-right: 10px;
+            padding-left: 10px;
+            color: black;
+            border-radius: 15px;
+            border: none;
+            background-color: rgb(247, 245, 241)
+        }
+
+        .button-item>.active {
+            background-color: rgb(154, 164, 170);
+        }
+
+        .button-class {
+            font-size: 2rem;
+            padding-right: 10px;
+            padding-left: 10px;
+            color: white;
+            border-radius: 15px;
+            border: none;
+            background-color: rgb(143, 154, 160);
+            width: 80%;
+        }
+
+        .card {
+            box-shadow: 4px 4px 12px -5px rgba(20%, 20%, 40%, 0.3);
+            border-radius: 0;
+            border-style: none;
+        }
+
+        .div-content {
+            margin: 30px 180px 30px 180px;
+        }
+
+        .list {
+            padding-bottom: 1rem;
+            font-size: 1.1rem;
+            margin-left: 4em;
+            text-indent: -4em;
+        }
+
+        @media only screen and (max-width: 1600px) {
+            .div-content {
+                margin: 10px 150px 30px 150px;
+            }
+
+            .carousel-inner img {
+                padding-right: 150px;
+                padding-left: 150px;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        @media only screen and (max-width: 1400px) {
+            .div-content {
+                margin: 10px 100px 30px 100px;
+            }
+
+            .carousel-inner img {
+                padding-right: 100px;
+                padding-left: 100px;
+                width: 100%;
+                height: 100%;
+            }
+
+        }
+
+        @media only screen and (max-width: 1200px) {
+            .div-content {
+                margin: 10px 40px 30px 40px;
+            }
+
+            .carousel-inner img {
+                padding-right: 40px;
+                padding-left: 40px;
+                width: 100%;
+                height: 100%;
+            }
+
+            .button-item {
+                padding-right: 5px;
+                padding-left: 5px;
+                color: black;
+                border-radius: 15px;
+                border: none;
+                background-color: rgb(247, 245, 241);
+
+            }
+        }
+
+        .nav-item a {
+            font-size: 1.1rem;
+            font-family: 'DFXingShuStd-W5';
+        }
+
+
+        .nav-pills .nav-item {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        .nav-pills .nav-link {
+            border-radius: 15px;
+            background-color: rgb(247, 245, 241);
+            color: black;
+        }
+
+        .nav-pills .nav-link.active {
+            border-radius: 15px;
+            background-color: rgb(213, 209, 205);
+        }
+
+        .table thead tr th {
+            border-bottom: 3px solid #dee2e6;
+        }
+
+        .table>tbody>tr:last-child {
+            border-bottom: 3px solid #dee2e6;
+        }
+
+        .image {
+            border-radius: 10px;
+            background-color: rgb(246, 244, 239);
+            height: 240px;
+            width: 240px;
+        }
+    </style>
+</head>
+
+<body style="background-color: rgb(255, 255, 255)">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#cfcbc6;margin-right: 0">
+        <div class="container text-center">
+            <a class="navbar-brand" href="/index.html"><img src="image/title.png" class="pr-5"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="button-item pr-2 pl-2 pt-1 pb-1" href="#">圖文檢索</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="button-item pr-2 pl-2 pt-1 pb-1" href="#">佛陀教育雜誌</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="button-item pr-2 pl-2 pt-1 pb-1" href="/Introduction.html">認識學院</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="button-item pr-2 pl-2 pt-1 pb-1" href="#">最新公告</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="button-item pr-2 pl-2 pt-1 pb-1" href="#">校務行政</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="button-item pr-2 pl-2 pt-1 pb-1" href="#">新生入學</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="button-item pr-2 pl-2 pt-1 pb-1" href="/index2.html"><i class="fas fa-user"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid" style="background-color: rgb(246, 244, 239)">
+        <div id="demo" class="carousel slide " data-ride="carousel">
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+                <li data-target="#demo" data-slide-to="3"></li>
+            </ul>
+
+            <!-- The slideshow -->
+            <div class="carousel-inner text-center div-image">
+                <div class="carousel-item div-image active">
+                    <img src="image/01.png">
+                </div>
+                <div class="carousel-item div-image">
+                    <img src="image/02.png">
+                </div>
+                <div class="carousel-item div-image">
+                    <img src="image/03.png">
+                </div>
+                <div class="carousel-item div-image">
+                    <img src="image/04.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row div-content">
+        <div class="col-12 text-left">
+            <h1 style="font-family: 'DFXingShuStd-W5';font-size: 3rem;">聽課教室</h1>
+        </div>
+        <div class="col-12">
+            <div class="row pb-5">
+                <div class="col-12 col-lg-3">
+                    <div class="image"></div>
+                </div>
+                <div class="col-12 col-lg-9 pt-3">
+                    <div class="row">
+                        <div class="col-12 col-lg-6 text-left">
+                            <h2>佛教是什麼</h2>
+                        </div>
+                        <div class="col-12 col-lg-6 text-right">
+                            <a href="#">講義下載</a> |
+                            <a href="#">影音下載</a> |
+                            <a href="#" data-toggle="modal" data-target="#myModal">心得分享</a>
+                        </div>
+                        <div class="col-12 pt-3 class_introduction">
+                            <p> 「受持三皈，具足眾戒，不犯威儀」。在家同學至少要學習《五戒相經箋要》和三皈傳授。三皈傳授有錄
+                                相帶，也有文字教材。出家的同學一定要學《沙彌律儀要略》，最低的水平是沙彌十戒、二十四門威儀。</p>
+                            <p>「具足眾戒」，就是十條戒圓圓滿滿。「不犯威儀」是二十四門威儀落實在日常生活、處事待人接物中。</p>
+                            <p>「受持三皈，具足眾戒，不犯威儀」。在家同學至少要學習《五戒相經箋要》和三皈傳授。三皈傳授有錄
+                                相帶，也有文字教材。出家的同學一定要學《沙彌律儀要略》，最低的水平是沙彌十戒、二十四門威儀。</p>
+                            <p>「具足眾戒」，就是十條戒圓圓滿滿。「不犯威儀」，是二十四門威儀落實在日常生活、處事待人接物中。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header" style="background-color:rgb(213,209,205);">
+                            <div class="row">
+                                <div class="col-6">課程集數</div>
+                                <div class="col-6 text-right"><a class="card-link" data-toggle="collapse"
+                                        data-target="#collapseOne">展開</a></div>
+                            </div>
+                        </div>
+                        <div id="collapseOne" class="collapse show">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <a href="#">自訂已完成課程內容</a>
+                                    </div>
+                                    <div class="col-6 text-right">
+                                        共x集
+                                    </div>
+                                    <div class="col-12 pt-3">
+                                        <div class="row text-center">
+                                            <div class="col-2 mb-3"><a href="#" class="btn btn-info">第一集</a></div>
+                                            <div class="col-2 mb-3"><a href="#" class="btn btn-info">第一集</a></div>
+                                            <div class="col-2 mb-3"><a href="#" class="btn btn-info">第一集</a></div>
+                                            <div class="col-2 mb-3"><a href="#" class="btn btn-info">第一集</a></div>
+                                            <div class="col-2 mb-3"><a href="#" class="btn btn-info">第一集</a></div>
+                                            <div class="col-2 mb-3"><a href="#" class="btn btn-info">第一集</a></div>
+                                            <div class="col-2 mb-3"><a href="#" class="btn btn-info">第一集</a></div>
+                                            <div class="col-2 mb-3"><a href="#" class="btn btn-info">第一集</a></div>
+                                            <div class="col-2 mb-3"><a href="#" class="btn btn-info">第一集</a></div>
+                                            <div class="col-2 mb-3"><a href="#" class="btn btn-info">第一集</a></div>
+                                            <div class="col-2 mb-3"><a href="#" class="btn btn-info">第一集</a></div>
+                                            <div class="col-2 mb-3"><a href="#" class="btn btn-info">第一集</a></div>
+                                            <div class="col-2 mb-3"><a href="#" class="btn btn-info">第一集</a></div>
+                                            <div class="col-2 mb-3"><a href="#" class="btn btn-info">第一集</a></div>
+                                            <div class="col-2 mb-3"><a href="#" class="btn btn-info">第一集</a></div>
+                                            <div class="col-2 mb-3"><a href="#" class="btn btn-info">第一集</a></div>
+                                            <div class="col-2 mb-3"><a href="#" class="btn btn-info">第一集</a></div>
+                                            <div class="col-2 mb-3"><a href="#" class="btn btn-info">第一集</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row pb-5">
+                    <div class="col-12 col-lg-3">
+                        <div class="image"></div>
+                    </div>
+                    <div class="col-12 col-lg-9 pt-3">
+                        <div class="row">
+                            <div class="col-12 col-lg-6 text-left">
+                                <h2>佛教是什麼</h2>
+                            </div>
+                            <div class="col-12 col-lg-6 text-right">
+                                <a href="#">講義下載</a> |
+                                <a href="#">影音下載</a> |
+                                <a href="#" data-toggle="modal" data-target="#myModal">心得分享</a>
+                            </div>
+                            <div class="col-12 pt-3 class_introduction">
+                                <p> 「受持三皈，具足眾戒，不犯威儀」。在家同學至少要學習《五戒相經箋要》和三皈傳授。三皈傳授有錄
+                                    相帶，也有文字教材。出家的同學一定要學《沙彌律儀要略》，最低的水平是沙彌十戒、二十四門威儀。</p>
+                                <p>「具足眾戒」，就是十條戒圓圓滿滿。「不犯威儀」是二十四門威儀落實在日常生活、處事待人接物中。</p>
+                                <p>「受持三皈，具足眾戒，不犯威儀」。在家同學至少要學習《五戒相經箋要》和三皈傳授。三皈傳授有錄
+                                    相帶，也有文字教材。出家的同學一定要學《沙彌律儀要略》，最低的水平是沙彌十戒、二十四門威儀。</p>
+                                <p>「具足眾戒」，就是十條戒圓圓滿滿。「不犯威儀」，是二十四門威儀落實在日常生活、處事待人接物中。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header" style="background-color:rgb(213,209,205);">
+                                <div class="row">
+                                    <div class="col-6">課程集數</div>
+                                    <div class="col-6 text-right"><a class="card-link" data-toggle="collapse"
+                                            data-target="#collapseOne">展開</a></div>
+                                </div>
+                            </div>
+                            <div id="collapseOne" class="collapse show">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <a href="#">自訂已完成課程內容</a>
+                                        </div>
+                                        <div class="col-6 text-right">
+                                            共x集
+                                        </div>
+                                        <div class="col-12 pt-3">
+                                            <div class="row text-center">
+                                                <div class="col-2 mb-3"><a href="#" class="btn btn-info">第一集</a></div>
+                                                <div class="col-2 mb-3"><a href="#" class="btn btn-info">第一集</a></div>
+                                                <div class="col-2 mb-3"><a href="#" class="btn btn-info">第一集</a></div>
+                                                <div class="col-2 mb-3"><a href="#" class="btn btn-info">第一集</a></div>
+                                                <div class="col-2 mb-3"><a href="#" class="btn btn-info">第一集</a></div>
+                                                <div class="col-2 mb-3"><a href="#" class="btn btn-info">第一集</a></div>
+                                                <div class="col-2 mb-3"><a href="#" class="btn btn-info">第一集</a></div>
+                                                <div class="col-2 mb-3"><a href="#" class="btn btn-info">第一集</a></div>
+                                                <div class="col-2 mb-3"><a href="#" class="btn btn-info">第一集</a></div>
+                                                <div class="col-2 mb-3"><a href="#" class="btn btn-info">第一集</a></div>
+                                                <div class="col-2 mb-3"><a href="#" class="btn btn-info">第一集</a></div>
+                                                <div class="col-2 mb-3"><a href="#" class="btn btn-info">第一集</a></div>
+                                                <div class="col-2 mb-3"><a href="#" class="btn btn-info">第一集</a></div>
+                                                <div class="col-2 mb-3"><a href="#" class="btn btn-info">第一集</a></div>
+                                                <div class="col-2 mb-3"><a href="#" class="btn btn-info">第一集</a></div>
+                                                <div class="col-2 mb-3"><a href="#" class="btn btn-info">第一集</a></div>
+                                                <div class="col-2 mb-3"><a href="#" class="btn btn-info">第一集</a></div>
+                                                <div class="col-2 mb-3"><a href="#" class="btn btn-info">第一集</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+
+    <div class="row" style="background-color:#cfcbc6;margin-bottom:0">
+        <div class="col-12 text-center pt-3">
+            <img src="image/title4.png" style="width: 10%;">
+            <img src="image/title3.png" style="width: 10%;">
+            <img src="image/title1.png" style="width: 10%;">
+            <img src="image/title2.png" style="width: 10%;">
+        </div>
+        <div class="col-12 text-center pt-3">
+            <p style="font-size: 0.7rem">Copyright © 2019 佛陀教育網路學院</p>
+
+        </div>
+    </div>
+</body>
+
+</html>
+
+<!-- The Modal -->
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header" style="border-bottom:0px">
+                <h4 class="modal-title">心得說明</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <!-- 其他學生的心得分享 -->
+            <!-- Modal body -->
+            <div class="modal-body ml-3 mr-3">
+                <div class="row">
+                    <div class="col-12 col-lg-6">學號：eb000000</div>
+                    <div class="col-12 col-lg-6 text-right">日期：108/11/07</div>
+                    <div class="col-12 pt-3">
+                        專科學科修學時間為四年。淨土法門所依的經典是「五經一論」：《阿彌陀經》、《無量壽經》、《觀無量壽佛經》、《普賢菩薩行願品》、《大勢至菩薩念佛圓通章》和《往生論》。每一位專科班學生從淨土五經一論中，選擇一部專精研究，一門深入，長時薰修。
+                    </div>
+                </div>
+                <hr style="border:2px dashed">
+                <div class="row">
+                    <div class="col-12 col-lg-6">學號：eb000000</div>
+                    <div class="col-12 col-lg-6 text-right">日期：108/11/07</div>
+                    <div class="col-12 pt-3">
+                        專科學科修學時間為四年。淨土法門所依的經典是「五經一論」：《阿彌陀經》、《無量壽經》、《觀無量壽佛經》、《普賢菩薩行願品》、《大勢至菩薩念佛圓通章》和《往生論》。每一位專科班學生從淨土五經一論中，選擇一部專精研究，一門深入，長時薰修。
+                    </div>
+                </div>
+                <hr style="border:2px dashed">
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer" style="border-top:0px">
+            </div>
+
+        </div>
+    </div>
+</div>

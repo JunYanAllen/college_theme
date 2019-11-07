@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>FontJSON = { User: "9856", DomainID: "freeUQYGDASDZTNAI", Font: ["DFXingShuStd-W5"] }</script>
+    <script src='https://dfo.dynacw.com.tw/DynaJSFont/DynaFont.js'></script>
+    <script src="https://kit.fontawesome.com/847b731f5e.js" crossorigin="anonymous"></script>
+
+    <style>
+        html,
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: PMingLiU;
+        }
+
+        .row {
+            margin-right: 0;
+            margin-left: 0;
+        }
+
+        .carousel-inner img {
+            padding-right: 200px;
+            padding-left: 200px;
+            width: 100%;
+            height: 70%;
+        }
+
+        .carousel-indicators li {
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            background-color: rgb(207, 203, 198);
+        }
+
+        .carousel-indicators .active {
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            background-color: rgb(144, 143, 141);
+        }
+
+        .button-item {
+            margin-right: 1rem;
+            padding-right: 10px;
+            padding-left: 10px;
+            color: black;
+            border-radius: 15px;
+            border: none;
+            background-color: rgb(247, 245, 241)
+        }
+
+        .button-item>.active {
+            background-color: rgb(154, 164, 170);
+        }
+
+        .button-class {
+            font-size: 2rem;
+            padding-right: 10px;
+            padding-left: 10px;
+            color: white;
+            border-radius: 15px;
+            border: none;
+            background-color: rgb(143, 154, 160);
+            width: 80%;
+        }
+
+        .card {
+            box-shadow: 4px 4px 12px -5px rgba(20%, 20%, 40%, 0.3);
+            border-radius: 0;
+            border-style: none;
+        }
+
+        .div-content {
+            margin: 30px 180px 30px 180px;
+        }
+
+        .list {
+            padding-bottom: 1rem;
+            font-size: 1.1rem;
+            margin-left: 4em;
+            text-indent: -4em;
+        }
+
+        @media only screen and (max-width: 1600px) {
+            .div-content {
+                margin: 10px 150px 30px 150px;
+            }
+
+            .carousel-inner img {
+                padding-right: 150px;
+                padding-left: 150px;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        @media only screen and (max-width: 1400px) {
+            .div-content {
+                margin: 10px 100px 30px 100px;
+            }
+
+            .carousel-inner img {
+                padding-right: 100px;
+                padding-left: 100px;
+                width: 100%;
+                height: 100%;
+            }
+
+        }
+
+        @media only screen and (max-width: 1200px) {
+            .div-content {
+                margin: 10px 40px 30px 40px;
+            }
+
+            .carousel-inner img {
+                padding-right: 40px;
+                padding-left: 40px;
+                width: 100%;
+                height: 100%;
+            }
+
+            .button-item {
+                padding-right: 5px;
+                padding-left: 5px;
+                color: black;
+                border-radius: 15px;
+                border: none;
+                background-color: rgb(247, 245, 241);
+
+            }
+        }
+
+        .nav-item a {
+            font-size: 1.1rem;
+            font-family: 'DFXingShuStd-W5';
+        }
+
+        .nav-pills .nav-item {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        .nav-pills .nav-link {
+            border-radius: 15px;
+            background-color: rgb(247, 245, 241);
+            color: black;
+        }
+
+        .nav-pills .nav-link.active {
+            border-radius: 15px;
+            background-color: rgb(213, 209, 205);
+        }
+
+        .table thead tr th {
+            border-bottom: 3px solid #dee2e6;
+        }
+
+        .table>tbody>tr:last-child {
+            border-bottom: 3px solid #dee2e6;
+        }
+    </style>
+</head>
+
+<body style="background-color: rgb(255, 255, 255)">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#cfcbc6;margin-right: 0">
+        <div class="container text-center">
+            <a class="navbar-brand" href="/index.html"><img src="image/title.png" class="pr-5"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="button-item pr-2 pl-2 pt-1 pb-1" href="#">圖文檢索</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="button-item pr-2 pl-2 pt-1 pb-1" href="#">佛陀教育雜誌</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="button-item pr-2 pl-2 pt-1 pb-1" href="/Introduction.html">認識學院</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="button-item pr-2 pl-2 pt-1 pb-1" href="#">最新公告</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="button-item pr-2 pl-2 pt-1 pb-1" href="#">校務行政</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="button-item pr-2 pl-2 pt-1 pb-1" href="#">新生入學</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="button-item pr-2 pl-2 pt-1 pb-1" href="/index2.html"><i class="fas fa-user"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid" style="background-color: rgb(246, 244, 239)">
+        <div id="demo" class="carousel slide " data-ride="carousel">
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+                <li data-target="#demo" data-slide-to="3"></li>
+            </ul>
+
+            <!-- The slideshow -->
+            <div class="carousel-inner text-center div-image">
+                <div class="carousel-item div-image active">
+                    <img src="image/01.png">
+                </div>
+                <div class="carousel-item div-image">
+                    <img src="image/02.png">
+                </div>
+                <div class="carousel-item div-image">
+                    <img src="image/03.png">
+                </div>
+                <div class="carousel-item div-image">
+                    <img src="image/04.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row div-content">
+        <div class="col-12 text-center pb-5" style="font-size: 1.3rem;">
+            <a href="/teacher_introduction.html">導師介紹</a> ｜ <a href="/Introduction.html">認識學院</a> ｜ <a href="/course_introduction.html">課程介紹</a> ｜ <a href="#">年度行事曆</a>
+        </div>
+        <div class="col-12 col-lg-6 text-left">
+            <h1 style="font-family: 'DFXingShuStd-W5';font-size: 3rem;">課程介紹</h1>
+        </div>
+        <div class="col-12 col-lg-6 text-right">
+            <ul class="nav nav-pills nav-justified">
+                <li class="nav-item">
+                    <a class="nav-link active" href="/course_introduction.html">基礎學科</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="/course_introduction2.html">本科學科</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/course_introduction3.html">專科學科</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-12" style="padding: 50px 60px 0px 60px;font-size: 1.2rem">
+            <p> 基礎學科修學時間兩年。主修是《認識佛教》、《弟子規》、《十善業道經》、《地藏菩薩本願經》、《阿難問事佛吉凶經》。 「網路學院」的課程是以「淨業三福」為基礎。</p>
+            <p class="list">第一福、「孝養父母，奉事師長」，如何落實?我們採取儒家的《弟子規》。<br>
+                《弟子規》的內容，就是在家做一個孝順的兒女，在學校做一個好學生，真正將這兩句話落實在生活當中。<br>
+                「慈心不殺，修十善業」，則落實在《十善業道經》，一定要認真努力學習。</p>
+            <p class="list">第二福、「受持三皈，具足眾戒，不犯威儀」。在家同學至少要學習《五戒相經箋要》和三皈傳授。三皈傳授有錄相帶，也有文字教材。<br>
+                出家的同學一定要學《沙彌律儀要略》，最低的水平是沙彌十戒、二十四門威儀。「具足眾戒」，就是十條戒圓圓滿滿。<br>
+                「不犯威儀」，是二十四門威儀落實在日常生活、處事待人接物中。</p>
+            <p class="list">第三福、「發菩提心，深信因果，讀誦大乘，勸進行者」，落實在《地藏菩薩本願經》。「地」是心地，「藏」是心地的寶藏。<br>
+                這一條就是《地藏經》的宗旨，我們要從學習《地藏經》來開發心地寶藏。這是前兩年的基礎課程。</p>
+            <p class="list">佛言:「淨業三福是三世諸佛淨業正因。」這句話說得多重!多麼重要!<br>
+                三世是過去、現在、未來，我們從凡夫修行作菩薩，將來成佛，真正根本的因就是這三條。<br>
+                八萬四千法門、無量法門，皆以此三條為基礎。<br>
+                若無此基礎，就不能成就;猶如蓋房打地基一樣，無論蓋什麼房子，地基一定要堅固，有了堅固的基礎，才能學法門。</p>
+
+        </div>
+        <div class="col-12">
+            <ul class="nav nav-pills nav-justified">
+                <li class="nav-item">
+                    <a class="nav-link active ml-5 mr-5" data-toggle="pill"
+                        style="font-size: 1.7rem;background-color:rgb(154, 164, 170);color: white;"
+                        href="#home">基礎班一年級</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link ml-5 mr-5" data-toggle="pill"
+                        style="font-size: 1.7rem;background-color:rgb(154, 164, 170);color: white;"
+                        href="#menu1">基礎班二年級</a>
+                </li>
+            </ul>
+
+            <div class="tab-content">
+                <div id="home" class="container tab-pane active"><br>
+                    <table class="table table-borderless text-center">
+                        <thead>
+                            <tr>
+                                <th>課程編號</th>
+                                <th>課程名稱</th>
+                                <th>種類</th>
+                                <th>授課老師</th>
+                                <th>修課人數</th>
+                                <th>備註</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>24-001</td>
+                                <td>佛教是什麼</td>
+                                <td>必修</td>
+                                <td>淨空法師</td>
+                                <td>80</td>
+                                <td>合併提交一份報告<br>24-001、24-002、17-013、17-001</td>
+                            </tr>
+                            <tr>
+                                <td>24-001</td>
+                                <td>佛教是什麼</td>
+                                <td>必修</td>
+                                <td>淨空法師</td>
+                                <td>80</td>
+                                <td>合併提交一份報告<br>24-001、24-002、17-013、17-001</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="menu1" class="container tab-pane fade"><br>
+                    <table class="table table-borderless text-center">
+                        <thead>
+                            <tr>
+                                <th>課程編號</th>
+                                <th>課程名稱</th>
+                                <th>種類</th>
+                                <th>授課老師</th>
+                                <th>修課人數</th>
+                                <th>備註</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>52-116</td>
+                                <td>細講《弟子規》、《弟子規》與佛法的修學</td>
+                                <td>必修</td>
+                                <td>蔡禮旭老師</td>
+                                <td>80</td>
+                                <td>合併提交一份報告<br>24-001、24-002、17-013、17-001</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row" style="background-color:#cfcbc6;margin-bottom:0">
+        <div class="col-12 text-center pt-3">
+            <img src="image/title4.png" style="width: 10%;">
+            <img src="image/title3.png" style="width: 10%;">
+            <img src="image/title1.png" style="width: 10%;">
+            <img src="image/title2.png" style="width: 10%;">
+        </div>
+        <div class="col-12 text-center pt-3">
+            <p style="font-size: 0.7rem">Copyright © 2019 佛陀教育網路學院</p>
+
+        </div>
+    </div>
+</body>
+
+</html>

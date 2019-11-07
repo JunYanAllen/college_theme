@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>FontJSON = { User: "9856", DomainID: "freeUQYGDASDZTNAI", Font: ["DFXingShuStd-W5"] }</script>
+    <script src='https://dfo.dynacw.com.tw/DynaJSFont/DynaFont.js'></script>
+    <script src="https://kit.fontawesome.com/847b731f5e.js" crossorigin="anonymous"></script>
+
+    <style>
+        html,
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: PMingLiU;
+        }
+
+        .row {
+            margin-right: 0;
+            margin-left: 0;
+        }
+
+        .carousel-inner img {
+            padding-right: 200px;
+            padding-left: 200px;
+            width: 100%;
+            height: 70%;
+        }
+
+        .carousel-indicators li {
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            background-color: rgb(207, 203, 198);
+        }
+
+        .carousel-indicators .active {
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            background-color: rgb(144, 143, 141);
+        }
+
+        .button-item {
+            margin-right: 1rem;
+            padding-right: 10px;
+            padding-left: 10px;
+            color: black;
+            border-radius: 15px;
+            border: none;
+            background-color: rgb(247, 245, 241)
+        }
+
+        .button-item>.active {
+            background-color: rgb(154, 164, 170);
+        }
+
+        .button-class {
+            font-size: 2rem;
+            padding-right: 10px;
+            padding-left: 10px;
+            color: white;
+            border-radius: 15px;
+            border: none;
+            background-color: rgb(143, 154, 160);
+            width: 80%;
+        }
+
+        .card {
+            box-shadow: 4px 4px 12px -5px rgba(20%, 20%, 40%, 0.3);
+            border-radius: 0;
+            border-style: none;
+        }
+
+        .div-content {
+            margin: 30px 180px 30px 180px;
+        }
+
+        .list {
+            padding-bottom: 1rem;
+            font-size: 1.1rem;
+            text-indent: 2em;
+        }
+
+        .number_list {
+            padding-bottom: 1rem;
+            font-size: 1.1rem;
+            margin-left: 2em;
+            text-indent: -2em;
+        }
+
+        @media only screen and (max-width: 1600px) {
+            .div-content {
+                margin: 10px 150px 30px 150px;
+            }
+
+            .carousel-inner img {
+                padding-right: 150px;
+                padding-left: 150px;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        @media only screen and (max-width: 1400px) {
+            .div-content {
+                margin: 10px 100px 30px 100px;
+            }
+
+            .carousel-inner img {
+                padding-right: 100px;
+                padding-left: 100px;
+                width: 100%;
+                height: 100%;
+            }
+
+        }
+
+        @media only screen and (max-width: 1200px) {
+            .div-content {
+                margin: 10px 40px 30px 40px;
+            }
+
+            .carousel-inner img {
+                padding-right: 40px;
+                padding-left: 40px;
+                width: 100%;
+                height: 100%;
+            }
+
+            .button-item {
+                padding-right: 5px;
+                padding-left: 5px;
+                color: black;
+                border-radius: 15px;
+                border: none;
+                background-color: rgb(247, 245, 241);
+
+            }
+        }
+
+        .nav-item a {
+            font-size: 1.1rem;
+            font-family: 'DFXingShuStd-W5';
+        }
+
+        .nav-pills .nav-item {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        .nav-pills .nav-link {
+            border-radius: 15px;
+            background-color: rgb(247, 245, 241);
+            color: black;
+        }
+
+        .nav-pills .nav-link.active {
+            border-radius: 15px;
+            background-color: rgb(213, 209, 205);
+        }
+
+        .table thead tr th {
+            border-bottom: 3px solid #dee2e6;
+        }
+
+        .table>tbody>tr:last-child {
+            border-bottom: 3px solid #dee2e6;
+        }
+
+        .image {
+            border-radius: 10px;
+            background-color: rgb(246, 244, 239);
+            height: 240px;
+            width: 240px;
+        }
+    </style>
+</head>
+
+<body style="background-color: rgb(255, 255, 255)">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#cfcbc6;margin-right: 0">
+        <div class="container text-center">
+            <a class="navbar-brand" href="/index.html"><img src="image/title.png" class="pr-5"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="button-item pr-2 pl-2 pt-1 pb-1" href="#">圖文檢索</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="button-item pr-2 pl-2 pt-1 pb-1" href="#">佛陀教育雜誌</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="button-item pr-2 pl-2 pt-1 pb-1" href="/Introduction.html">認識學院</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="button-item pr-2 pl-2 pt-1 pb-1" href="#">最新公告</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="button-item pr-2 pl-2 pt-1 pb-1" href="#">校務行政</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="button-item pr-2 pl-2 pt-1 pb-1" href="#">新生入學</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="button-item pr-2 pl-2 pt-1 pb-1" href="/index2.html"><i class="fas fa-user"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid" style="background-color: rgb(246, 244, 239)">
+        <div id="demo" class="carousel slide " data-ride="carousel">
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+                <li data-target="#demo" data-slide-to="3"></li>
+            </ul>
+
+            <!-- The slideshow -->
+            <div class="carousel-inner text-center div-image">
+                <div class="carousel-item div-image active">
+                    <img src="image/01.png">
+                </div>
+                <div class="carousel-item div-image">
+                    <img src="image/02.png">
+                </div>
+                <div class="carousel-item div-image">
+                    <img src="image/03.png">
+                </div>
+                <div class="carousel-item div-image">
+                    <img src="image/04.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row div-content">
+        <div class="col-12 text-center" style="font-size: 1.3rem;">
+            <a href="/teacher_introduction.html">導師介紹</a> ｜ <a href="/Introduction.html">認識學院</a> ｜ <a href="/course_introduction.html">課程介紹</a> ｜ <a href="#">年度行事曆</a>
+        </div>
+        <div class="col-12 pb-5">
+            <h1 style="font-family: 'DFXingShuStd-W5';font-size: 3rem;">成立緣起</h1>
+            <div class="row">
+                <div class="col-12" style="padding: 40px 80px 0px 80px;font-size: 1.2rem">
+                    <p class="list">時值末季，法門秋晚，世道日非，佛法式微，人心澆漓，邪說競興;魔外俗流，乘機煽惑，壞佛法之心宗，倒因果之正說。
+                        又淺識之者，雖有學佛之心，卻苦無入佛法門之指引，甚或錯認路頭，南轅北轍，因果相背，以致學而不得實益。</p>
+                    <p class="list">尤其中國大陸，近年來日見學佛者多而得佛法真實受用者少，甚至錯入門路，不僅有損佛法教化之形象，亦損彼天真之心
+                        名學佛而實與佛背道而馳，皆緣於無正法弘揚。唯今之計，只有遵印光大師提倡因果教育之正說，揚我佛慈悲濟世，化導人心轉
+                        迷為覺之宗旨，俾一切有緣者，明因識果，斷惡修善，破迷開悟，知佛正法之所以，明辨是非，方能不隨邪說而起舞!</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 pb-5">
+            <div class="row">
+                <div class="col-9">
+                    <h1 style="font-family: 'DFXingShuStd-W5';font-size: 3rem;">教學宗旨</h1>
+                    <div class="row">
+                        <div class="col-12" style="padding: 50px 50px 50px 50px;font-size: 1.2rem">
+                            <p class="pb-5">利用網際網路無遠弗屆的便利，使佛法傳播至每個角落，故開辦「佛陀教育網路學院」</p>
+                            <p>期裨益更多學佛之緇素，以達淨化人心，啟迪智慧，學為人師 行為世範之目的。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="image text-right"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 pb-5">
+            <h1 style="font-family: 'DFXingShuStd-W5';font-size: 3rem;">學院院訓 <sub
+                    style="font-size: 1.4rem;padding-left: 1.4em;">「敦倫盡分，閑邪存誠，老實念佛，求生淨土。」</sub></h1>
+            <div class="row">
+                <div class="col-12" style="padding: 50px 50px 50px 50px;font-size: 1.2rem">
+                    <p class="list">早年我跟李炳南老師學教時，他老人家教給我，學習經教要認真，縱然不能契入教理，至少要懂得教義。所以，我們就以印光大師
+                        傳心法印「敦倫盡分，閑邪存誠，老實念佛，求生淨土」，作為我們淨宗學院的院訓。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 pb-5">
+            <h1 style="font-family: 'DFXingShuStd-W5';font-size: 3rem;">教學方式</h1>
+            <div class="row">
+                <div class="col-12" style="padding: 50px 50px 50px 50px;font-size: 1.2rem">
+                    <p class="list">「佛陀教育網路學院」謹遵 淨空老和尚「九年教學」之教誨依序播出，以網路教學為主，彼此互相討論為輔。教學方法，則以一門
+                        深入，長時薰修，每日課程重覆多次聆聽，專注聽經，不雜餘想，離言說相、離名字相、離心緣相，如是聽經，當下即是一心，即是三慧 三學同時具足，一時完成。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 pb-5">
+            <h1 style="font-family: 'DFXingShuStd-W5';font-size: 3rem;">修學介紹</h1>
+            <div class="row">
+                <div class="col-12" style="padding: 50px 50px 50px 50px;font-size: 1.2rem">
+                    <p class="number_list">1、「佛陀教育網路學院」謹遵　 淨空老和尚「九年教學」之課程，共分九個年級，分別是基礎一、基礎二、本科一、本科二、本科三、專科一、專科二、專科三、專科四。
+                    </p>
+                    <p class="number_list">
+                        2、同時我們在網上開闢了綜合討論版，內有「生活心理輔導、心得交流、報告欣賞」等相關內容。生活心理輔導，提供同修們提出聽經修學之疑問，所有網路學院的同學皆可在此互相交流討論，相互學習，以達同參之效。學佛心得則是同學將聽經後的感想以及學佛過程的心得點滴，提供大家互相勉勵與參考。
+                    </p>
+                    <p class="number_list">
+                        3、在日常行為進德方面，則依「淨宗同學修行守則」，將修學落實於生活及工作當中；並依「百過格」及「淨宗行人每日自我檢驗評量表」，切實記載一日之修行及生活中之滴點，自我勉勵策進，並在修學上提升自己的德行涵養。功過格，便是提供同學記錄自己每日之心行，幫助自己改過向善之工具，亦是輔助學院掌握每位同學自我修學評量之情況。
+                    </p>
+                    <p class="number_list">
+                        4、佛法修行的三個階段：一、轉惡為善。二、轉迷為悟。三、轉凡成聖。以《弟子規》、《太上感應篇》、《了凡四訓》等學科，奠定轉惡為善的基礎；以《十善業道經》和《阿難問事佛吉凶經》作為轉惡為善的指導，使我們的思想及行為做到純善無惡，轉凡成聖。唯有使自己成聖成賢，我們才有能力幫助佛法的弘傳，解救當前及後世苦難的眾生。
+                    </p>
+                    <p>總結
+                        近代佛教衰微，總在學佛之人，未能做出好樣子，故而令世人對佛法產生誤解、誤會，甚至破壞佛法。網路學院之教學，旨在令一切在家出家之大眾，先奠定學佛之基礎，培養正知正見，再專修淨土，深信切願，求生淨土，為世人做出學佛人的好榜樣，即是以身教弘法，比之言教者，更為殊勝，此即古德所謂之「正己化他」。若自己不得其正，縱有言教，雖令不從。故
+                        　淨公老和尚，一再勉勵學人，出家人要做出家人的好榜樣，在家人要做在家人的好榜樣，道場要做一切道場的好榜樣，方是真佛弟子，真念佛求生淨土者。願淨業同人，共相勉勵之!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 pb-5">
+            <h1 style="font-family: 'DFXingShuStd-W5';font-size: 3rem;">未來展望</h1>
+            <div class="row">
+                <div class="col-12" style="padding: 50px 50px 50px 50px;font-size: 1.2rem">
+                    <p>◎人才培訓計劃：</p>
+                    <p class="number_list">
+                        １、文稿整理：訓練整理文字稿的人才，已上手的僅有兩位，正在培訓中的有三位，視未來發展的需求，可再增加培訓新的人才，投入弘法、服務工作。網路學院所培養出的人才，不僅為網路學院服務，也為「華藏淨宗學會」服務，尤其文字稿的整理，若有需要，義不容辭，盡心盡力！
+                    </p>
+                    <p class="number_list">２、白話翻譯(新)：二00八年八月間，有十幾位古文底子較好的同學，發心將《冥報記》與《幽冥問答錄》二書做了白話翻譯，此書已出版流通。</p>
+                    <p class="number_list">３、弟子規叢書系列(新)：蔡老師系列叢書共有九本，已出版4本，都是培訓網路學院同修幫忙匯整。</p>
+                    <p>◎學習狀況：</p>
+                    <p>學佛的道路是漫長的，不是學習幾個月或是幾年就可以結束，而是一生一世，甚至生生世世不間斷的學習，必須要有耐力，持之以恆的學習，方能見其成效。網路學院至成立至今，為跟隨　老和尚修學的異地同學提供了溝通、研討、切磋的機會，同學與同學之間，老師與同學之間，雖不能見面，亦能互相討論在學習、生活、工作、家庭、婚姻中所遇到的種種問題，亦能彼此之間互相關懷，提供經驗，有難解的問題，則可請　老和尚在星期五的學佛問答中回覆，真正為廣大學佛的同學，提供了一個解決困難，促進學習，激勵道心的一個平台。有同學留言說：「人生難得，佛法難聞，慈悲的學院老師難遇，學生從內心珍惜此緣，百千萬劫難遇的緣。人生苦短，應及時學習，不應再將大好的生命浪費在無益之事，應充分利用此網路學院修學的便利條件，來提升自己的境界，提升自己的學習能力，讓自己在菩提道上勇往直前，方不負此生此遇，亦不負　老和尚一片教導之苦心！」由此可知，網路學院非常有必要持續發展，希望各個領域的同仁能繼續給予支持與幫助，讓網路學院能繼續放光放熱，服務廣大有緣人。
+                    </p>
+                    <p>◎中程目標：</p>
+                    <p>以九年學程規劃，課程以澳洲淨宗學院九年學程為主軸，網路電視節目課程同步規劃播出，並以「淨空法師專集網站」提供影音及教材，完成教學目標。每日播放二個半小時。</p>
+                    <p>◎出版教科書：</p>
+                    <p>網路學院現前已出版「佛陀教育網路學院」教材，基礎一到本科三的教材都有。以叢書方式製作，所有教科書使用相同模式的封面，固定為25k燙金版封面。如此便有整套的淨土叢書，也便於收藏，亦容易於學習與內容的查找。至於出版的經費，目前來自大陸同學發心捐款。網路學院百分之八十以上的學生都在大陸，教材都在大陸印刷，並免費贈送給大陸及香港、國外同學。
+                    </p>
+                    <p>◎請書系統：</p>
+                    <p>為了便利學院同學上網自動登記請書，及行政人員操作請書/寄書，故成立此請書系統，運作非常好，從程式後端可以自動印出同學的寄送地址名條。</p>
+                    <p>◎免費製作贈送DVD光碟：</p>
+                    <p>自學院成立以來，致力於佛陀教育的推廣，得到全體網路學院同學的護持，在此感謝大家的發心付出！為了更進一步的服務廣大中國大陸有緣學佛者，使一般不會上網的同修，亦能按照學院的課程次第，循序漸進的學習，網路學院將免費製作贈送DVD光碟，同學們在請書系統中申請。
+                        網路學院已經有多位同學已在做「免費」流通老和尚講演光碟，結合大家的力量，齊心合力，共同服務，一則不重複浪費，二則可讓申請光碟的同學，與就近流通的同學聯係索取，將能更擴大服務範圍。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style="background-color:#cfcbc6;margin-bottom:0">
+        <div class="col-12 text-center pt-3">
+            <img src="image/title4.png" style="width: 10%;">
+            <img src="image/title3.png" style="width: 10%;">
+            <img src="image/title1.png" style="width: 10%;">
+            <img src="image/title2.png" style="width: 10%;">
+        </div>
+        <div class="col-12 text-center pt-3">
+            <p style="font-size: 0.7rem">Copyright © 2019 佛陀教育網路學院</p>
+
+        </div>
+    </div>
+</body>
+
+</html>
