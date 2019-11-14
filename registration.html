@@ -106,6 +106,22 @@
                 width: 100%;
                 height: 100%;
             }
+
+            .input_div_r {
+                padding: 0px 150px 0px 50px;
+            }
+
+            .input_div_l {
+                padding: 0px 50px 0px 150px;
+            }
+
+            .declaration_div {
+                padding: 0px 200px 0px 200px;
+            }
+            
+            .modal-body{
+                padding: 50px 150px 0px 150px;
+            }
         }
 
         @media only screen and (max-width: 1400px) {
@@ -141,7 +157,22 @@
                 border-radius: 15px;
                 border: none;
                 background-color: rgb(247, 245, 241);
+            }
 
+            .input_div_r {
+                padding: 0px 40px 0px 40px;
+            }
+
+            .input_div_l {
+                padding: 0px 40px 0px 40px;
+            }
+
+            .declaration_div {
+                padding: 0px 40px 0px 40px;
+            }
+
+            .modal-body{
+                padding: 50px 50px 0px 50px;
             }
         }
 
@@ -190,6 +221,29 @@
             color: black;
         }
 
+        .submit_btn {
+            margin-right: 1.2rem;
+            padding: 5px 100px 5px 100px;
+            border-radius: 10px;
+            border: none;
+            background-color: rgb(213, 209, 204);
+            color: #ffffff;
+        }
+        
+        .go_classromm{
+            margin-right: 1.2rem;
+            padding: 5px 100px 5px 100px;
+            border-radius: 10px;
+            border: none;
+            background-color: rgb(213, 209, 204);
+            color: #000000;
+        }
+
+        .submit_btn:hover {
+            color: #ffffff;
+            background-color: rgb(154, 164, 170);
+        }
+
         .relative1 {
             position: relative;
             margin: 0 auto;
@@ -210,7 +264,27 @@
             height: 200px;
             border-radius: 10px;
         }
+
+        .form-group {
+            padding-bottom: 30px;
+        }
+
+        .form-control {
+            background-color: rgb(247, 245, 241);
+            border: rgb(229, 225, 221);
+        }
+
+        .form-control:focus {
+            background-color: rgb(247, 245, 241);
+        }
     </style>
+    <script>
+        $(document).ready(function(){
+            $('#myModal').on('hidden.bs.modal', function (e) {
+            });
+        });
+        
+    </script>
 </head>
 
 <body style="background-color: rgb(255, 255, 255)">
@@ -277,79 +351,85 @@
     </div>
     <div class="row div-content">
         <div class="col-12 text-center pb-4" style="font-size: 1.3rem;">
-            <!-- 已登入將無此選項 --><a href="/registration.html">註冊報名</a> ｜ <a href="/Introduction.html">課程介紹</a> ｜ <a href="/">年度行事曆</a>
+            <a href="/teacher_introduction.html">註冊報名</a> ｜ <a href="/Introduction.html">課程介紹</a> ｜ <a
+                href="/">年度行事曆</a>
         </div>
 
         <div class="col-12 pb-4">
-            <h1 style="font-family: 'DFXingShuStd-W5';font-size: 3rem;">入學指導</h1>
+            <h1 style="font-family: 'DFXingShuStd-W5';font-size: 3rem;">報名註冊</h1>
         </div>
         <div class="col-12 pb-5">
-            <h2 style="font-family: 'DFXingShuStd-W5';">報名資格：</h2>
-            <div class="row">
-                <div class="col-12" style="padding: 20px 80px 0px 80px;font-size: 1.2rem">
-                    <p class="list">「佛陀教育網路學院」，完全免費提供大眾參加網路修學之用，任何人都可報名參加，沒有限定一定要皈依。此網路教學最大的目的，是希望透過網路同參共同修學，彼此互相砥礪，精進用功，以克服自己懈怠懶散之心。而一切參加網路學習者，不可冒本學院之名行不法之事，亦或謀取私利，或毀壞佛教形象。</p>
+            <form class="row" action="#">
+                <div class="col-12 col-lg-6 input_div_l">
+                    <div class="form-group">
+                        <label for="usr">姓名：</label>
+                        <input type="text" class="form-control" id="usr">
+                    </div>
+                    <div class="form-group">
+                        <label for="usr">性別：</label>
+                        <input type="text" class="form-control" id="usr">
+                    </div>
+                    <div class="form-group">
+                        <label for="usr">職業：</label>
+                        <input type="text" class="form-control" id="usr">
+                    </div>
+                    <div class="form-group">
+                        <label for="usr">電話：</label>
+                        <input type="text" class="form-control" id="usr">
+                    </div>
+                    <div class="form-group">
+                        <label for="usr">地址：</label>
+                        <input type="text" class="form-control" id="usr">
+                    </div>
+                    <div class="form-group">
+                        <label for="usr">密碼：</label>
+                        <input type="text" class="form-control" id="usr">
+                    </div>
+                    <div class="form-group">
+                        <label for="usr">確認密碼：</label>
+                        <input type="text" class="form-control" id="usr">
+                    </div>
                 </div>
-            </div>
-        </div>
-
-        <div class="col-12 pb-5">
-            <h2 style="font-family: 'DFXingShuStd-W5';">修學說明：</h2>
-            <div class="row">
-                <div class="col-12" style="padding: 20px 80px 0px 80px;font-size: 1.2rem">
-                    <p class="list">「佛陀教育網路學院」，完全免費提供大眾參加網路修學之用，任何人都可報名參加，沒有限定一定要皈依。此網路教學最大的目的，是希望透過網路同參共同修學，彼此互相砥礪，精進用功，以克服自己懈怠懶散之心。而一切參加網路學習者，不可冒本學院之名行不法之事，亦或謀取私利，或毀壞佛教形象。</p>
+                <div class="col-12 col-lg-6 input_div_r">
+                    <div class="form-group">
+                        <label for="usr">出生 年/月/日：</label>
+                        <input type="text" class="form-control" id="usr">
+                    </div>
+                    <div class="form-group">
+                        <label for="usr">語言：</label>
+                        <input type="text" class="form-control" id="usr">
+                    </div>
+                    <div class="form-group">
+                        <label for="usr">國籍：</label>
+                        <input type="text" class="form-control" id="usr">
+                    </div>
+                    <div class="form-group">
+                        <label for="usr">電子郵件：</label>
+                        <input type="text" class="form-control" id="usr">
+                    </div>
+                    <div class="form-group">
+                        <label for="usr">專長學歷：</label>
+                        <input type="text" class="form-control" id="usr">
+                    </div>
+                    <div class="form-group">
+                        <label for="usr">義工意願：</label>
+                        <select class="form-control" id="sel1">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
-        </div>
-
-        <div class="col-12 pb-5">
-            <h2 style="font-family: 'DFXingShuStd-W5';">講課節目播放：</h2>
-            <div class="row">
-                <div class="col-12" style="padding: 20px 80px 0px 80px;font-size: 1.2rem">
-                    <p>格式：分兩種，一為播出約170k左右的視訊資料；一為電台型式，播放聲音廣播。</p>
-                    <p>說明：</p>
-                    <p class="number_list">1、 播放節目以完整講次來播放，如一次是講半小時，就播放半小時，每日只播放一種經典，以符合　導師教誨，一卷經一天反覆聽八次，密集薰習，方能達到聽經的效果。</p>
-                    <p class="number_list">2、 當日播放的節目，於任何時間均可無數次重播，且每次收看都從第一個節目開始播放，但可隨時選擇收看下一個節目。一天的課程總時間，定為一個半小時。</p>
-                    <p class="number_list">3、 若網站的「電視畫面」播放的只有聲音，而無影像，表示此套講演只有聲音格式，無影像檔，因早期講演多半只有保留聲音。</p>
-                    <p class="number_list">4、 除了聽講之外，還可以下載經本、講錄文字、及教材的電子檔，文字與影音互相對照，以達事半功倍之效。</p>  
-                    <p class="number_list">5、 為了呈現較佳的影音畫面，希望同學能用寬頻來收看。若收視中出現影音畫面斷訊，表示目前收視人數較多，可稍後再試。</p>
-                    <p class="number_list">6、依九年學程依序播放，節目如下：</p> 
-                    <p class="number_list">A、修學開示：播放歷年早餐開示。</p>
-                    <p class="number_list">B、基礎學科：播放學院兩年基礎所修科目。播放次序為：《十善業道經》、《地藏菩薩本願經》、《阿難問事佛吉凶經》、《弟子規》、《沙彌律儀要略》。</p>
-                    <p class="number_list">C、本科學科：播放學院三年本科所修科目。以五經一論的大意、啟示、精華等內容為主。</p>
-                    <p class="number_list">D、專修學科：播放學院四年專修所修科目。如五經一論歷代祖師的註解為主，如阿彌陀經要解、阿彌陀經疏鈔演義等。</p>
-                    <p>以上科目為基礎學科與淨宗典籍為主。但為了適應不同興趣之修學，本學院也提供　導師所講之各宗各派經論的影音節目，提供給學人選其契機者修學。如金剛經、六祖壇經等，可隨時點選，重複播放，請至淨空法師專集網站。</p>
+                <div class="col-12 declaration_div">
+                    <h3>聲明事項</h3>
+                    <p style="padding:15px 2em 0px 2em">若您考量後，確實能依照網路學院規定的做到，再填報名表，我們收到資料後會發一封信給正式學員，
+                        並告知一個識別的學號及密碼。此學號及密碼，將使用在「學生中心」中，請務必妥善保管您的密碼。 這是您使用「學生中心」的識別資料，沒有輸入此識別資料，您將無法進入聽課、參與網路心得研討、
+                        提交修學報告及修改查詢個人學籍資料。報名表中的所有內容，將會保密，不會對外公布，亦不做其 他用途。</p>
                 </div>
-            </div>
-        </div>
-
-        <div class="col-12 pb-5">
-            <h2 style="font-family: 'DFXingShuStd-W5';">修學評量：</h2>
-            <div class="row">
-                <div class="col-12" style="padding: 20px 80px 0px 80px;font-size: 1.2rem">
-                    <p class="list">依淨宗同學修行守則，將修學落實於生活及工作當中；並依「功過格」及「淨宗行人每日自我檢驗評量表」，切實記載一日之修行及生活中之滴點，自我勉勵策進，並在修學上提升自己的德行涵養。</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-12 pb-5">
-            <h2 style="font-family: 'DFXingShuStd-W5';">功過格及修學評量表：</h2>
-            <div class="row">
-                <div class="col-12" style="padding: 20px 80px 0px 80px;font-size: 1.2rem">
-                    <p class="list">請確實每日逐一記錄，請從首頁進入線上版功過格，也請先參考功過格白話解釋，以便更清楚每個功過項目。所有資料學院均做保留，但不會對外公布，也不做為其他用途。</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-12 pb-5">
-            <h2 style="font-family: 'DFXingShuStd-W5';">報名：</h2>
-            <div class="row">
-                <div class="col-12" style="padding: 20px 80px 0px 80px;font-size: 1.2rem">
-                    <p class="list">若您考量後，確實能依照網路學院規定的做到，再填報名表，我們收到資料後會發一封信給正式學員，並告知一個識別的學號及密碼。此學號及密碼，將使用在「學生中心」中，請務必妥善保管您的密碼。這是您使用「學生中心」的識別資料，沒有輸入此識別資料，您將無法進入聽課、參與網路心得研討、提交修學報告及修改查詢個人學籍資料。報名表中的所有內容，將會保密，不會對外公布，亦不做其他用途。</p>
-                    <p class="list">您報名完成後，學院教務系統已預設您的選課（必修）課程，您還可以選擇其他「選修」課程，請在每年的四個開放選課時段(4/1~4/7、7/1~7/7、10/1~10/7、1/1~1/7)加選或退選課程，請至「選課加課」去手動選課。</p>
-                    <p class="list">若要查詢所有必修、選修課程，請至「科目學分」查詢，或進入「選課加課」，輸入學號/密碼後，會自動出現所選之課，再予以手動加退選。所選之課必須要提交修學報告，通過審核後，方可升級。</p>
-                    <p class="list">註：要查詢每個課程的上課日期，請至「課程總表」。此總表包含所有必修及選修課，若您沒有選擇「選修科目」，當日可以不用上網聽課，也不用提交該課程的報告。但希望學生都能儘量抽空來上所有的課程，沒有選修也能來聽課，以求精進努力不懈。</p>
-                </div>
-            </div>
+                <div class="col-12 col-lg-6 input_div_l text-center pb-3"><button type="button" class="btn submit_btn" data-toggle="modal" data-target="#myModal">送出</button> </div>
+                <div class="col-12 col-lg-6 input_div_r text-center pb-3"><button type="button" class="btn submit_btn">重填</button></div>
+            </form>
         </div>
 
     </div>
@@ -369,3 +449,36 @@
 </body>
 
 </html>
+
+<!-- The Modal -->
+<div class="modal fade" id="myModal" data-backdrop="static" >
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header" style="border-bottom:0px;background-color: rgb(247, 245, 241);">
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body" style="background-color: rgb(247, 245, 241);">
+                <h3>XXX您好，阿彌陀佛!</h3>
+                <p class="text-center" style="font-size: 1.3rem;padding-top:30px ;">...................................您識別證號：xx12345</p>
+                <p style="font-size: 1.2rem;padding-top:30px;padding-bottom:100px ;">若您考量後，確實能依照網路學院規定的做到，再填報名表，我們收到資料後會發一封信給正式學員，並告知一個識別的學號及密碼。此學生及密碼，將使用在「學生中心」中，請務必妥善保管您的密碼。這是您使用「學生中心」的識別資料，沒有輸入此識別資料，您將無法進入聽課、參與網路心得研討、提交修學報告及修改查詢個人學籍資料。</p>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer" style="border-top:0px;display:inline;">
+                <div class="row">
+                    <div class="col-12 col-lg-6" style="display: flex;align-self: flex-end;padding-bottom: 12px;">
+                        <a href="/index2.html" class="btn go_classromm">前往上課</a>
+                    </div>
+                    <div class="col-12 col-lg-6  text-right" style="font-size: 1.1rem;">
+                        <p>耑此 敬祝</p>
+                        <p>道業精進 法喜充滿</p>
+                        <p>佛陀教育網路學院敬上</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

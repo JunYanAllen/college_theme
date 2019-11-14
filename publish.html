@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-bs4.css" rel="stylesheet">
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>FontJSON = { User: "9856", DomainID: "freeUQYGDASDZTNAI", Font: ["DFXingShuStd-W5"] }</script>
+    <script src='https://dfo.dynacw.com.tw/DynaJSFont/DynaFont.js'></script>
+    <script src="https://kit.fontawesome.com/847b731f5e.js" crossorigin="anonymous"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-bs4.js"></script>
+
+    <style>
+        html,
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: PMingLiU;
+        }
+
+        .row {
+            margin-right: 0;
+            margin-left: 0;
+        }
+
+        .carousel-inner img {
+            padding-right: 200px;
+            padding-left: 200px;
+            width: 100%;
+            height: 70%;
+        }
+
+        .carousel-indicators li {
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            background-color: rgb(207, 203, 198);
+        }
+
+        .carousel-indicators .active {
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            background-color: rgb(144, 143, 141);
+        }
+
+        .button-item {
+            margin-right: 1rem;
+            padding-right: 10px;
+            padding-left: 10px;
+            color: black;
+            border-radius: 15px;
+            border: none;
+            background-color: rgb(247, 245, 241)
+        }
+
+        .button-item>.active {
+            background-color: rgb(154, 164, 170);
+        }
+
+        .button-class {
+            font-size: 2rem;
+            padding-right: 10px;
+            padding-left: 10px;
+            color: white;
+            border-radius: 15px;
+            border: none;
+            background-color: rgb(143, 154, 160);
+            width: 80%;
+        }
+
+
+        .div-content {
+            margin: 30px 100px 30px 100px;
+        }
+
+        .list {
+            padding-bottom: 1rem;
+            font-size: 1.1rem;
+            text-indent: 2em;
+        }
+
+        .number_list {
+            padding-bottom: 1rem;
+            font-size: 1.1rem;
+            margin-left: 2em;
+            text-indent: -2em;
+        }
+
+        .item{
+            font-family: 'DFXingShuStd-W5';
+            color: white;
+            font-size: 1.3rem;
+            width: 230px;
+            padding: 3px 0px 3px 15px;
+            background-color: rgb(213,209,205);
+            border-radius: 15px;
+            position: relative;
+        }
+
+        .item_text{
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-family: 'DFXingShuStd-W5';
+            color: black;
+            width: 160px;
+            padding: 0px 0px 3px 15px;
+            background-color: rgb(247,245,241);
+            border-radius: 15px;
+            text-align: center;
+        }
+        .item_btn{
+            font-size: 1.3rem;
+            padding: 0px 0px 0px 0px;
+        }
+
+        .nav-item a {
+            font-size: 1.1rem;
+            font-family: 'DFXingShuStd-W5';
+            text-decoration:none;
+        }
+
+        .nav-pills .nav-item {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        .nav-pills .nav-link {
+            border-radius: 15px;
+            background-color: rgb(247, 245, 241);
+            color: black;
+        }
+
+        .nav-pills .nav-link.active {
+            border-radius: 15px;
+            background-color: rgb(213, 209, 205);
+        }
+    
+        .submit_btn{
+            font-family: 'DFXingShuStd-W5';
+            font-size: 1.2rem;
+            margin-right: 1.2rem;
+            padding: 5px 15px 5px 15px;
+            border-radius: 20px;
+            border: none;
+            background-color: rgb(154, 164, 170);
+            color: #ffffff;
+        }
+
+        .card-header.note-toolbar{
+            padding-left: 20px;
+            background-color: rgb(213,209,205);
+            border-radius: 15px 15px 0px 0px;
+        }
+
+        .note-editor.note-frame{
+            box-shadow: 4px 4px 12px -5px rgba(20%, 20%, 40%, 0.7);
+            border:0px;
+            border-radius: 15px;
+        }
+
+        .note-btn-group .note-btn{
+            border: 0.5px solid #000000;
+            background-color: #ffffff;
+        }
+
+        @media only screen and (max-width: 1600px) {
+            .div-content {
+                margin: 10px 80px 30px 80px;
+            }
+
+            .carousel-inner img {
+                padding-right: 150px;
+                padding-left: 150px;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        @media only screen and (max-width: 1400px) {
+            .div-content {
+                margin: 10px 60px 30px 60px;
+            }
+
+            .carousel-inner img {
+                padding-right: 100px;
+                padding-left: 100px;
+                width: 100%;
+                height: 100%;
+            }
+
+        }
+
+        @media only screen and (max-width: 1200px) {
+            .div-content {
+                margin: 10px 20px 30px 20px;
+            }
+
+            .carousel-inner img {
+                padding-right: 40px;
+                padding-left: 40px;
+                width: 100%;
+                height: 100%;
+            }
+
+            .button-item {
+                padding-right: 5px;
+                padding-left: 5px;
+                color: black;
+                border-radius: 15px;
+                border: none;
+                background-color: rgb(247, 245, 241);
+            }
+
+            .item{
+                font-family: 'DFXingShuStd-W5';
+                color: white;
+                font-size: 1.1rem;
+                width: 180px;
+                padding: 3px 0px 3px 15px;
+                background-color: rgb(213,209,205);
+                border-radius: 15px;
+                position: relative;
+                float:left
+            }
+
+            .item_text{
+                position: absolute;
+                top: 0;
+                right: 0;
+                font-family: 'DFXingShuStd-W5';
+                color: black;
+                font-size: 1.1rem;
+                width: 120px;
+                padding: 0px 0px 3px 15px;
+                background-color: rgb(247,245,241);
+                border-radius: 15px;
+                text-align: center;
+            }
+
+            .item_btn{
+                font-size: 1.1rem;
+                padding: 0px 0px 0px 0px;
+            }
+        }
+
+        
+    </style>
+    <script>
+        $(document).ready(function () {
+            $('.summernote').summernote({
+                height: 300
+            });
+        });
+    </script>
+</head>
+
+<body style="background-color: rgb(255, 255, 255)">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#cfcbc6;margin-right: 0">
+        <div class="container text-center">
+            <a class="navbar-brand" href="/index.html"><img src="image/title.png" class="pr-5"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="button-item pr-2 pl-2 pt-1 pb-1" href="#">圖文檢索</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="button-item pr-2 pl-2 pt-1 pb-1" href="#">佛陀教育雜誌</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="button-item pr-2 pl-2 pt-1 pb-1" href="/Introduction.html">認識學院</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="button-item pr-2 pl-2 pt-1 pb-1" href="#">最新公告</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="button-item pr-2 pl-2 pt-1 pb-1" href="#">校務行政</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="button-item pr-2 pl-2 pt-1 pb-1" href="#">新生入學</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="button-item pr-2 pl-2 pt-1 pb-1" href="/index2.html"><i class="fas fa-user"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid" style="background-color: rgb(246, 244, 239)">
+        <div id="demo" class="carousel slide " data-ride="carousel">
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+                <li data-target="#demo" data-slide-to="3"></li>
+            </ul>
+
+            <!-- The slideshow -->
+            <div class="carousel-inner text-center div-image">
+                <div class="carousel-item div-image active">
+                    <img src="image/01.png">
+                </div>
+                <div class="carousel-item div-image">
+                    <img src="image/02.png">
+                </div>
+                <div class="carousel-item div-image">
+                    <img src="image/03.png">
+                </div>
+                <div class="carousel-item div-image">
+                    <img src="image/04.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row div-content">
+        <div class="col-12 pt-4 pb-3">
+            <h1 style="font-family: 'DFXingShuStd-W5';font-size: 3rem;"><a href="discussion.html" style="color: rgb(154, 164, 170);"><i class="fas fa-angle-left"></i></a>  發新帖子</h1>
+        </div>
+        <form class="col-12">
+            <div class="row">
+                <div class="col-6">
+                    <div class="item">
+                        <span class="text-left">看板</span>
+                        <div class="item_text">
+                            <button type="button" class="btn item_btn  dropdown-toggle" data-toggle="dropdown">
+                                功課研討
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">功課研討</a>
+                                <a class="dropdown-item" href="#">心得分享</a>
+                                <a class="dropdown-item" href="#">生活問題</a>
+                                <a class="dropdown-item" href="#">網站問題</a>
+                                <a class="dropdown-item" href="#">念佛迴向</a>
+                                <a class="dropdown-item" href="#">欣賞休學報告</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 text-right">
+                    <button class="btn submit_btn" type="submit">送出文章</button>
+                </div>
+                <div class="col-12 pt-5">
+                    <div class="summernote"></div>
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="row" style="background-color:#cfcbc6;margin-bottom:0">
+        <div class="col-12 text-center pt-3">
+            <img src="image/title4.png" style="width: 10%;">
+            <img src="image/title3.png" style="width: 10%;">
+            <img src="image/title1.png" style="width: 10%;">
+            <img src="image/title2.png" style="width: 10%;">
+        </div>
+        <div class="col-12 text-center pt-3">
+            <p style="font-size: 0.7rem">Copyright © 2019 佛陀教育網路學院</p>
+
+        </div>
+    </div>
+</body>
+
+</html>
